@@ -1,0 +1,584 @@
+/* Variabel Warna */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #333;
+  --light-color: #fff;
+}
+
+/* Mengatur margin dan padding dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Gaya untuk header */
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--secondary-color);
+}
+
+/* Gaya untuk navbar */
+.navbar {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+}
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--light-color);
+}
+
+.navbar-brand span {
+  color: var(--primary-color);
+  animation: colorRotation 5s infinite;
+}
+
+.nav-link {
+  color: var(--light-color) !important;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Gaya umum home */
+.home-section {
+  background: linear-gradient(180deg, var(--secondary-color) 55%, var(--primary-color) 100%);
+  padding: 60px 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.home-section .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.home-section .hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  animation: fadeInRight 1s ease;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.home-section .description {
+  font-size: large;
+}
+.home-section .features {
+  margin-top: 20px;
+  padding-top: 40px;
+}
+
+.home-section .features-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.home-section .features-table td {
+  padding: 10px;
+  text-align: left;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-section .features-table td:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.home-section .products {
+  margin-top: 20px;
+  padding-top: 40px;
+}
+
+.home-section .product-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.home-section .product-table td {
+  padding: 10px;
+  text-align: left;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-section .product-table td:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.home-section .cta-section {
+  margin-top: 30px;
+}
+
+.home-section .cta-section .btn {
+  margin-right: 5px;
+}
+
+.home-section .display-4 {
+  animation: fadeInUp 1s ease;
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+  .home-section {
+    background: linear-gradient(180deg, var(--secondary-color) 50%, var(--primary-color) 100%);
+    padding: 30px 10px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .home-section .display-4 {
+    font-size: 2em;
+  }
+
+  .home-section .lead {
+    font-size: 1em;
+  }
+
+  .home-section .cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-section .cta-section .btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Gaya umum features */
+.features-section {
+  background: linear-gradient(180deg, var(--secondary-color) 40%, var(--primary-color) 100%);
+  padding: 60px 10px;
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.features-section .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.features-section .section-title {
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.features-section .product-image {
+  width: 100%;
+  border-radius: 10px;
+  padding-bottom: 50px;
+}
+
+.features-section .feature-icon {
+  color: var(--light-color);
+  margin-bottom: 20px;
+  padding-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.features-section .feature-icon:hover {
+  transform: scale(1.1);
+}
+
+.features-section .product-showcase {
+  padding-top: 50px;
+}
+
+.features-section .product-showcase img {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.features-section .product-showcase p {
+  padding-bottom: 50px;
+}
+
+.features-section .testimonials {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+.features-section .testimonials p {
+  color: var(--light-color);
+  font-style: italic;
+}
+
+.product-image img {
+  animation: fadeInRight  2s ;
+}
+
+.section-title.text-light {
+  animation: fadeInUp  2s ;
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+  .features-section {
+    background: linear-gradient(180deg, var(--secondary-color) 20%, var(--primary-color) 100%);
+    padding: 30px 10px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .features-section .section-title {
+    font-size: 1.5em;
+  }
+
+  .features-section .cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-section .cta-section .btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Gaya umum about us */
+.about-section {
+  background: linear-gradient(180deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  padding: 60px 10px;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+.about-section .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-section .section-title {
+  color: var(--light-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease;
+  padding-bottom: 20px;
+}
+
+.about-section .lead {
+  font-size: 1.25em;
+  color: var(--light-color);
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease 0.2s backwards;
+  padding-top: 20px;
+}
+
+.about-section img {
+  max-width: 300px;
+  border-radius: 50%;
+}
+
+.about-section .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-section .content > div {
+  flex-basis: 48%;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f8f8f846;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+.about-section .history,
+.about-section .mission-vision,
+.about-section .values,
+.about-section .team {
+  margin-bottom: 0;
+}
+
+.about-section .values .list-unstyled {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-section .values .list-unstyled li {
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.about-section .team-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.about-section .team-photos {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50%;
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+  .about-section {
+    background: linear-gradient(180deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    padding: 30px 10px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .about-section .content > div {
+    flex-basis: 100%;
+  }
+
+  .about-section .team-photos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-section .team-photo {
+    margin-bottom: 10px;
+  }
+
+  .about-section .lead {
+    font-size: 1em;
+  }
+
+  .about-section .section-title {
+    font-size: 1.5em;
+  }
+}
+
+/* Gaya umum contact us */
+.contact-section {
+  background: linear-gradient(180deg, #004fa3 0%, var(--light-color) 65%);
+  padding: 60px 10px;
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.contact-section .section-title {
+  color: var(--light-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-section .lead {
+  color: var(--light-color);
+  font-size: 1.25em;
+  margin-bottom: 20px;
+}
+
+.contact-section .contact-form {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-section .contact-form label {
+  color: var(--light-color);
+}
+
+.contact-section .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-section .form-control {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-section .contact-info,
+.contact-section .social-media {
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
+.contact-section .social-media a {
+  padding: 10px;
+  margin-right: 10px;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.contact-section .social-media img {
+  max-width: 30px;
+}
+
+.contact-section .map {
+  text-align: center; 
+  margin-bottom: 30px;
+}
+
+.contact-section .map h3 {
+  font-size: 1.5em; 
+  color: var(--secondary-color); 
+  margin-bottom: 10px; 
+}
+
+.contact-section .map iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 400px; 
+  border: 1px solid #ddd; 
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.contact-form {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+
+.section-title{
+  animation: fadeInUp 2s;
+}
+
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+  .contact-section {
+    background: linear-gradient(180deg, #004fa3 0%, var(--light-color) 65%);
+    padding: 30px 10px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .contact-section .section-title {
+    font-size: 1.75em;
+  }
+
+  .contact-section .lead {
+    font-size: 1em;
+  }
+
+  .contact-section .form-group {
+    padding: 0 10px;
+  }
+
+  .contact-section .contact-form {
+    margin-bottom: 20px;
+  }
+
+  .contact-section .social-media a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .contact-section .map iframe {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+/* Gaya umum footer */
+.footer-section {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 20px 10px;
+  }
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+/* Gaya untuk tombol */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+/* Animasi */
+@keyframes colorRotation {
+  0% {
+    color: #007bff;
+  }
+  25% {
+    color: #fff;
+  }
+  50% {
+    color: #dc3545;
+  }
+  75% {
+    color: #fff;
+  }
+  100% {
+    color: #007bff;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
